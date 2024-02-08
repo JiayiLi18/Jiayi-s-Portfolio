@@ -39,7 +39,7 @@ h1 {
 }
 
 h2{
-    margin-top: auto;
+    margin: auto;
     font-size: 26px;
     color: var(--txt1);
     font-style: normal;
@@ -76,6 +76,7 @@ p{
     font-weight: 400;
     line-height: normal;
     font-family: 'Roboto';
+    margin-top: auto;
 }
 
 img {
@@ -88,7 +89,6 @@ nav{
     height: fit-content;
     display: flex;
     justify-content: space-between;
-    padding-bottom: 10vh;
 }
 
 nav h3{
@@ -107,14 +107,10 @@ nav h3:hover, #focusing{
     filter: drop-shadow(0px 5px 10px var(--shl));
 }
 
-nav.background{
-    margin-bottom: 90vh;
-}
-
 
 .homepage{
     align-items: center;
-    height: 85vh;
+    height: 95vh;
     margin: 0px;
     margin-bottom: 0px;
     display: flex;
@@ -129,7 +125,7 @@ nav.background{
     position: absolute; 
     width: 501px;
     height: 501px;
-    animation: bounceV 2s infinite alternate linear;
+    animation: bounceV 3s infinite alternate linear;
     background: none;
 }
 #bouncingContainer{
@@ -140,9 +136,10 @@ nav.background{
     background-repeat: no-repeat; 
     background-position: center;
     position: absolute; 
-    animation: bounceH 3s infinite alternate linear;
+    animation: bounceH 4s infinite alternate linear;
     z-index: 99;
     filter: drop-shadow(0px 5px 5px var(--shl)) hue-rotate(0deg);
+    mix-blend-mode:hard-light;
     transition-duration: 0.2s;
 }
 
@@ -230,18 +227,17 @@ nav.background{
 }
 
 .projects{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap:wrap;
+    display: grid; 
+    grid-template-columns: repeat(4, 1fr); 
+    grid-gap: 10px; 
 }
 
 .projects .projectCover{
     display: flex;
     height:fit-content;
-    width: 33%;
+    width: 100%;
     flex-direction: column;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
 }
 
 .headline{
@@ -295,6 +291,48 @@ nav.background{
     gap: 60px;
 }
 
+div.background{
+    left:0;
+    top: 0;
+    position: fixed;
+    z-index: -1;
+}
+.background img {
+    height: 100vh;
+    object-fit: cover;
+    z-index: -2;
+}
+
+nav.background{
+    margin-bottom: 0vh;
+    padding-bottom: 0;
+}
+
+section.projectTitle{
+    margin: 0px;
+    height: 95vh;
+    background: none;
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    mix-blend-mode: difference;
+    text-align: center;
+    filter: drop-shadow(5px 5px 8px var(--shl));
+}
+
+.header{
+    gap: 0px;
+    align-items: center;
+    margin-bottom: 0px;
+    
+    background-color: var(--shl);
+}
+
+.header *{
+    color: var(--hl);
+}
+
 section.bigBackground{
     margin: 0;
     margin-bottom: 0;
@@ -304,31 +342,49 @@ section.bigBackground > :first-child{
     padding-top: 20px;
 }
 
+section.intro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: 50px;
+    gap: 15px;
+    margin-bottom: 80px;
+}
+
+
 section.ratio0{
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
     align-items: center;
+    gap: 0;
+    margin-bottom: 15px;
 }
 
 section.ratio0 article{
-    width: 50%;
+    width: 70vw;
 }
 
 section.ratio1{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: row-reverse;
+    gap:5vw;
+    margin-bottom: 15px;
+}
+
+section img{
+    width: 100%;
 }
 
 .ratio1 > :first-child{
-    width: 35vw;
+    width: 23vw;
 }
 
 .ratio1 > :last-child{
-    width: 60vw;
+    width: 72vw;
 }
 
-section.ratio2{
+/*section.ratio2{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -340,11 +396,7 @@ section.ratio2{
 
 .ratio2 > :last-child{
     width: 35vw;
-}
-
-section.header{
-    gap: 0px;margin-bottom: 0px;
-}
+}*/
 
 footer{
     margin: 5px;
@@ -363,22 +415,13 @@ a{
     text-decoration: none;
 }
 
-img.background {
-    left:0;
-    top: 0;
-    height: 100vh;
-    position: fixed;
-    z-index: -1;
-    object-fit: cover;
-}
-
 iframe{
+   max-height: 80vh;
    aspect-ratio: 16/9;
-   object-fit: fill;
-   width: 100%;
+   object-fit: contain;
 }
 
-@media (max-width:700px) {
+@media (max-width:600px) {
     section{
         flex-direction: column;
     }
@@ -414,8 +457,13 @@ iframe{
     .selectedProjects{
         flex-direction: column;
     }
-    .projectCover, .projects .projectCover{
+
+    .projectCover{
         width: 100%;
+    }
+    
+    .projects{
+        grid-template-columns: repeat(1, 1fr);
     }
 
     .about{
@@ -436,17 +484,14 @@ iframe{
         width: 100%;
     }
 
+    section.ratio1{
+        flex-direction: column;
+    }
+
     .ratio1> :first-child{
         width: 100%;
     }
     .ratio1> :last-child{
-        width: 100%;
-    }
-
-    .ratio2> :first-child{
-        width: 100%;
-    }
-    .ratio2> :last-child{
         width: 100%;
     }
 
