@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@400;500&family=Roboto&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="toTop.js" defer></script>
 
     <title>Jiayi's Portfolio-Project</title>
 </head>
@@ -30,9 +31,24 @@
                 <h3>About</h3>
             </a>
     </nav>
+
     <section class="projectTitle">
         <h1 style="font-size: 80px;color: var(--shl);">BEING</h1>
     </section>
+    
+    <div class="arrows">
+        <button id="arrowToTop">
+            <svg width="40" height="40" xmlns="http://www.w3.org/2000/svg">
+                <polygon points="20,5 5,35 35,35" />
+            </svg>
+        </button>
+        
+        <button id="arrowDown">
+            <svg width="40" height="40" xmlns="http://www.w3.org/2000/svg">
+                <polygon points="20,35 5,5 35,5" />
+            </svg>
+        </button>
+    </div>
 
         <section class="bigBackground">
             <section class="intro">
@@ -145,9 +161,9 @@
                 <img class="background" src="project_1/cover.jpg" alt="cover" />
             </section>-->
         
-            <section>
+            <section class="toIndex">
                 <a href="index.html">
-                    <h2 class="zoom" style="color: var(--hl); text-align: center;">
+                    <h2 class="zoom">
                         See other projects </h2>
                 </a>
             </section>

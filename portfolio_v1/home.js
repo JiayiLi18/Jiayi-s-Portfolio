@@ -3,6 +3,8 @@ var images=[
     "url(images/CosmicR_cover.jpg)",
     "url(images/moai_cover.png)",
     "url(images/fungiCity_cover.png)",
+    "url(images/cat_impact_cover.png)",
+    "url(images/crossing_liminal_cover.png)",
 ]
 
 var links=[
@@ -10,6 +12,9 @@ var links=[
     "project_2.html",
     "project_1.html",
     "project_2.html",
+    "https://lijiayii.itch.io/cat-impact",
+    "https://itch.io/jam/games-now-jam-autumn2023/rate/2363964",
+
 ]
 
 var randomImage=document.getElementById('randomImage');
