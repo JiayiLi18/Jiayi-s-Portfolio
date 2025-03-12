@@ -13,7 +13,7 @@ html {
 }
 
 body {
-    cursor: url('/images/custom-cursor.svg'), auto;
+    cursor: url('./images/custom-cursor.svg'), auto;
     background-color: var(--bg);
     margin: auto;
     overflow-x: hidden;
@@ -124,7 +124,7 @@ nav h3:hover, #focusing{
 }
 
 #arrowToTop{
-    cursor: url('/images/custom-cursor-pointer.svg'), auto;
+    cursor: url('./images/custom-cursor-pointer.svg'), auto;
     background: none;
     border: none;
     width: fit-content;
@@ -136,7 +136,7 @@ nav h3:hover, #focusing{
 }
 
 #arrowDown{
-    cursor: url('/images/custom-cursor-pointer.svg'), auto;
+    cursor: url('./images/custom-cursor-pointer.svg'), auto;
     background: none;
     border: none;
     position: fixed;
@@ -191,7 +191,7 @@ polygon:hover{
 #bouncingContainer{
     width: 400px; 
     height: 400px; 
-    background-image: url(/images/retroPC.png); 
+    background-image: url(./images/retroPC.png); 
     background-size: contain; 
     background-repeat: no-repeat; 
     background-position: center;
@@ -220,7 +220,7 @@ polygon:hover{
     position: absolute; 
     top: 25%; 
     left: 21%; 
-    background-image: url(/images/CosmicR_cover.jpg);
+    background-image: url(./images/CosmicR_cover.jpg);
     background-size: cover; 
     background-position: center;
     background-repeat: no-repeat; 
