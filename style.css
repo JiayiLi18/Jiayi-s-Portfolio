@@ -279,7 +279,7 @@ polygon:hover{
 }
 
 .projectCover{
-    cursor: url('/images/custom-cursor-pointer.svg'), auto;
+    cursor: url('/Jiayi-s-Portfolio/images/custom-cursor-pointer.svg'), auto;
     display: flex;
     height:fit-content;
     width: 49%;
@@ -475,7 +475,7 @@ footer h4{
 
 a{
     text-decoration: none;
-    cursor: url('/images/custom-cursor-pointer.svg'), auto;
+    cursor: url('/Jiayi-s-Portfolio/images/custom-cursor-pointer.svg'), auto;
 }
 
 iframe{
